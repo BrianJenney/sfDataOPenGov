@@ -1,0 +1,54 @@
+*{
+  font-family: courier;
+  padding: 0;
+  margin: 0;
+}
+#controls input{
+  margin-left: 2%;
+  font-family: courier !important;
+}
+button{
+  margin-left: 2%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#controls p{
+  margin-left: 2%;
+  text-decoration: underline;
+  font-family: courier;
+  font-weight: 900;
+  color: orangered;
+}
+
+button{
+  padding: 5px;
+  width: 15%;
+  background-color: blue;
+  color: white;
+  font-weight: 900;
+  font-family: sans-serif;
+  border: 1px solid lightgray;
+  border-radius: 5%;
+}
+
+button:hover{
+  background-color: green;
+}
+
+header{
+  text-align: center;
+  background-image: url("http://www.cascoservicesinc.com/brooklyn-bridge-manhattanFINALLLL.png");
+  background-repeat: no-repeat;
+  color: white;
+  padding: 0;
+  height: 100px;
+  background-size: cover;
+  padding-top: 3%
+}
+
+#details{
+  text-decoration: none !important;
+  margin-bottom: 2%;
+}
+

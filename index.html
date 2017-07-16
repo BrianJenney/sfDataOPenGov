@@ -7,8 +7,14 @@
 
 </head>
 <body>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcxCTneoolsMGhrbXjxf14jg9ozDrP-QQ&callback=initMap"
-  type="text/javascript"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcxCTneoolsMGhrbXjxf14jg9ozDrP-QQ&callback=initMap"
+    type="text/javascript"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
 <script type="text/javascript">
 	function initMap() {
   	var map = new google.maps.Map(document.getElementById('map'), {
@@ -16,83 +22,28 @@
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-
 }
 </script>
-<style>
-	*{
-  font-family: courier;
-  padding: 0;
-  margin: 0;
-}
-#controls input{
-  margin-left: 2%;
-  font-family: courier !important;
-}
-button{
-  margin-left: 2%;
-  margin-top: 3%;
-  margin-bottom: 3%;
-}
-
-#controls p{
-  margin-left: 2%;
-  text-decoration: underline;
-  font-family: courier;
-  font-weight: 900;
-  color: orangered;
-}
-
-button{
-  padding: 5px;
-  width: 15%;
-  background-color: blue;
-  color: white;
-  font-weight: 900;
-  font-family: sans-serif;
-  border: 1px solid lightgray;
-  border-radius: 5%;
-}
-
-button:hover{
-  background-color: green;
-}
-
-header{
-  text-align: center;
-  background-image: url("http://www.cascoservicesinc.com/brooklyn-bridge-manhattanFINALLLL.png");
-  background-repeat: no-repeat;
-  color: white;
-  padding: 0;
-  height: 100px;
-  background-size: cover;
-  padding-top: 3%
-}
-
-#details{
-  text-decoration: none !important;
-  margin-bottom: 2%;
-}
-
-
-</style>
 
 <header>
   <h1>Crime in SF's Mission District</h1>
 </header>
 <br>
-<div id="controls">
-  <p>TYPE OF CRIME:</p><br>
-  <input type="radio" name="offense" value="VANDALISM" id="myRadio">VANDALISM
-  <input type="radio" name="offense" value="ROBBERY" id="myRadio">ROBBERY
-  <input type="radio" name="offense" value="DRUG/NARCOTIC" id="myRadio" checked>DRUG/NARCOTIC
-  <input type="radio" name="offense" value="VEHICLE THEFT" id="myRadio">VEHICLE THEFT
-  <input type="radio" name="offense" value="ASSAULT"   id="myRadio">ASSAULT<br>
+<div id="controls" class="row">
 
-<button onclick="getData()">CLICK</button><br>
+    <p>TYPE OF CRIME:</p><br>
+    <input type="radio" name="offense" value="VANDALISM" id="myRadio">VANDALISM
+    <input type="radio" name="offense" value="ROBBERY" id="myRadio">ROBBERY
+    <input type="radio" name="offense" value="DRUG/NARCOTIC" id="myRadio" checked>DRUG/NARCOTIC
+    <input type="radio" name="offense" value="VEHICLE THEFT" id="myRadio">VEHICLE THEFT
+    <input type="radio" name="offense" value="ASSAULT"   id="myRadio">ASSAULT<br>
 
+    <button class="btn btn-primary" onclick="getData()">Find Crime</button>
+  </div>
 
-<div style="width: 100%; height: 500px" id="map"></div>
+    
+
+<div style="top: 2%; width: 70%; margin: auto; height: 500px" id="map"></div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
